@@ -1,0 +1,21 @@
+name: feiduodianqiao
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '45 5/6 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: feiduodianqiao
+        env:
+          kts4: ${{ secrets.kts4 }}
+        run: |
+          echo $kts4 | jq -r .y03061 | /bin/bash
+          echo $wbm84 | jq -r .k7903 | /bin/bash
+          echo $stwnh4 | jq -r .pjty393 | /bin/bash
+          echo $ersg0815 | jq -r .wzf5335 | /bin/bash
+          echo $b545 | jq -r .y68649 | /bin/bash
+
